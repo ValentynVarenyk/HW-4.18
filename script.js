@@ -1,8 +1,7 @@
-// Масив для збереження отриманих студентів
 let studentsList = [];
 
 
-// Функція для отримання всіх студентів
+
 async function getStudents() {
     try {
         const response = await fetch('http://localhost:3000/students');
@@ -24,7 +23,7 @@ async function getStudents() {
 }
 
 
-// Функція для відображення студентів у таблиці
+
 function renderStudents(students) {
     const tbody = document.querySelector('#students-table tbody');
 
@@ -69,7 +68,7 @@ function renderStudents(students) {
 }
 
 
-// Функція для додавання нового студента
+
 async function addStudent(e) {
     e.preventDefault();
 
@@ -111,7 +110,7 @@ async function addStudent(e) {
 }
 
 
-// Функція для оновлення студента
+
 async function updateStudent(id) {
     const student = studentsList.find(student => student.id === id);
 
@@ -180,7 +179,7 @@ async function updateStudent(id) {
 }
 
 
-// Функція для видалення студента
+
 async function deleteStudent(id) {
     const confirmDelete = confirm('Ви дійсно хочете видалити студента?');
 
@@ -211,7 +210,7 @@ async function deleteStudent(id) {
 }
 
 
-// Обробники подій
+
 document.querySelector('#get-students-btn')
     .addEventListener('click', getStudents);
 
